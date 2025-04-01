@@ -1,0 +1,128 @@
+/* index.css */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #021526;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #6eacda;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h2 {
+  color: #021526;
+  text-align: center;
+}
+
+span {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  color: #ffffff;
+}
+
+h3 {
+  color: #021526;
+  text-align: center;
+}
+
+a {
+  color: #021526;
+  text-decoration: none;
+}
+a:hover {
+  color: #6EACDA;
+}
+a:visited {
+  color: #6eacda;
+}
+
+.results {
+  background-color: #E2E2B6;
+}
+
+.btn {
+  background-color: #6EACDA;
+  color: #021526;
+}
+
+.btn:hover {
+  background-color: #021526;
+  color: #ffffff;
+}
+
+.response {
+  color: #03346E;
+}
+
+.night-sky {
+  position: relative;
+  background: #0b1d39;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.night-sky::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png");
+  opacity: 0.4;
+  animation: slow-fade 10s infinite alternate ease-in-out;
+}
+
+@keyframes slow-fade {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+.star {
+  position: absolute;
+  background: white;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  animation: twinkle 5s infinite alternate ease-in-out;
+}
+
+@keyframes collapse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.star-collapse {
+  animation: collapse 3s infinite alternate ease-in-out;
+}
