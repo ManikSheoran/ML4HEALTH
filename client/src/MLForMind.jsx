@@ -30,7 +30,7 @@ export default function MLForMind() {
     setResult(null);
     setError(null);
     try {
-      const response = await fetch("http://localhost:5000/predict", {
+      const response = await fetch("http://localhost:5000/predict/mind", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: userText }),
@@ -120,7 +120,7 @@ export default function MLForMind() {
         <button
           onClick={handleSubmit}
           disabled={loading}
-          className="btn w-100 shadow"
+          className="btn btn-primary btn-lg shadow px-5 w-100"
         >
           {loading ? "Analyzing..." : "Check Status"}
         </button>

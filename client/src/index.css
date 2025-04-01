@@ -17,6 +17,10 @@ h2 {
   text-align: center;
 }
 
+h4, h5, h6 {
+  color: #021526;
+}
+
 span {
   font-family: "Pinyon Script", cursive;
   font-weight: 400;
@@ -41,6 +45,10 @@ a:hover {
 }
 a:visited {
   color: #6eacda;
+}
+
+.box{
+  background-color: #6EACDA;
 }
 
 .results {
